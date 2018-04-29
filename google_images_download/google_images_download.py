@@ -773,7 +773,7 @@ class googleimagesdownload:
                 i = 0
                 while i < len(search_keyword):      # 2.for every main keyword
                     iteration = "\n" + "Item no.: " + str(i + 1) + " -->" + " Item name = " + str(pky) + str(search_keyword[i] + str(sky))
-                    print(iteration)
+                    print(iteration.encode(encoding='utf-8', errors='replace'))
                     print("Evaluating...")
                     search_term = pky + search_keyword[i] + sky
                     dir_name = search_term + ('-' + arguments['color'] if arguments['color'] else '')   #sub-directory
